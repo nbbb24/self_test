@@ -9,6 +9,8 @@ hardware-specific or operationally expensive for a normal unit-test suite.
 
 Files:
 
+- [`hicache/README.md`](hicache/README.md) is the complete step-by-step
+  runbook, including setup, A3/A5 commands, pass criteria, and troubleshooting.
 - [`hicache/run_npu_memcache_l2_l3.sh`](hicache/run_npu_memcache_l2_l3.sh)
   launches a single-node, four-NPU SGLang PD deployment and the NPU MemCache
   MetaService.
