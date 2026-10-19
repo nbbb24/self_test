@@ -14,6 +14,8 @@ Files:
   MetaService.
 - [`hicache/verify_npu_memcache_l2_l3.py`](hicache/verify_npu_memcache_l2_l3.py)
   performs the cache round-trip and enforces the pass criteria.
+- [`hicache/example.env`](hicache/example.env) is a copy-and-edit configuration
+  template for model paths, devices, addresses, cache sizes, and ports.
 
 The test was prepared against SGLang `upstream/main` commit
 `ed0b8f433f887995b1ce361b15aaf9f6ca93483f`.
@@ -49,17 +51,39 @@ The default device assignment matches the original test host:
 
 #### Quick start
 
-A3 uses `device_sdma` for the HiCache L2/L3 path:
+The recommended workflow is to copy the readable configuration template once,
+edit the machine-specific values, and reuse it for later runs:
+
+```bash
+cp sglang/hicache/example.env sglang/hicache/local.env
+$EDITOR sglang/hicache/local.env
+
+CONFIG_FILE=sglang/hicache/local.env \
+  bash sglang/hicache/run_npu_memcache_l2_l3.sh a3
+```
+
+The profile selects the default HiCache L2/L3 protocol:
+
+- `a3` uses `device_sdma`.
+- `a5` uses `device_urma`.
+
+If the built-in defaults already match the machine, launch directly:
 
 ```bash
 bash sglang/hicache/run_npu_memcache_l2_l3.sh a3
-```
-
-A5 uses `device_urma` for the HiCache L2/L3 path:
-
-```bash
 bash sglang/hicache/run_npu_memcache_l2_l3.sh a5
 ```
+
+Inspect the resolved configuration without launching any service:
+
+```bash
+DRY_RUN=1 CONFIG_FILE=sglang/hicache/local.env \
+  bash sglang/hicache/run_npu_memcache_l2_l3.sh a3
+```
+
+The launcher prints clearly separated stages for preflight checks, resolved
+configuration, MemCache startup, Prefill/Decode startup, router startup,
+validation, and cleanup. Run it with `--help` for the short command reference.
 
 Example with explicit machine settings:
 
@@ -97,6 +121,7 @@ Keeping the two settings separate makes transport failures easier to isolate.
 
 | Variable | Default | Description |
 | --- | --- | --- |
+| `CONFIG_FILE` | Unset | Optional env file loaded before resolving settings. |
 | `MODEL_PATH` | `/home/weights/Qwen3-32B-W8A8` | Model directory or identifier. |
 | `SERVED_MODEL_NAME` | `qwen` | API model name. |
 | `PREFILL_DEVICES` | `12,13` | Prefill NPU visibility list. |
@@ -110,6 +135,7 @@ Keeping the two settings separate makes transport failures easier to isolate.
 | `MEMCACHE_WORLD_SIZE` | `256` | Maximum MemCache rank count. |
 | `LOG_DIR` | `/home/sxy/logs/sglang-hicache-<profile>` | Logs and result artifacts. |
 | `KEEP_SERVERS` | `0` | Set to `1` to keep services after a passing run. |
+| `DRY_RUN` | `0` | Set to `1` to validate and print settings only. |
 
 For `device_urma`, MemCache requires
 `max_dram_size * world_size > 32 TiB`. The defaults provide a 64 TiB virtual

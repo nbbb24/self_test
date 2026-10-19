@@ -19,6 +19,10 @@ from pathlib import Path
 from typing import Any
 
 
+# =============================================================================
+# HTTP HELPERS
+# =============================================================================
+
 def _post_json(url: str, body: dict[str, Any] | None, timeout: float) -> Any:
     data = None if body is None else json.dumps(body).encode("utf-8")
     headers = {} if data is None else {"Content-Type": "application/json"}
@@ -55,6 +59,10 @@ def _generate(router_url: str, prompt: str, max_tokens: int, timeout: float) -> 
     return response
 
 
+# =============================================================================
+# RESULT AND METRICS HELPERS
+# =============================================================================
+
 def _cache_stats(response: dict) -> tuple[int, int, dict[str, int]]:
     meta = response.get("meta_info", {})
     prompt_tokens = int(meta.get("prompt_tokens", 0))
@@ -85,6 +93,10 @@ def _write_json(path: Path, payload: Any) -> None:
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
 
+
+# =============================================================================
+# END-TO-END VALIDATION FLOW
+# =============================================================================
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)

@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+
+# Machine-specific copy of the HiCache example configuration.
+sglang/hicache/local.env
