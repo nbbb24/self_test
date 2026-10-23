@@ -11,6 +11,50 @@ HiCache L2 and NPU MemCache L3.
 The Prefill-to-Decode transport is configured separately and defaults to
 `device_rdma` for both profiles.
 
+## DeepSeek-V4-Flash Wiki copies: A3 and A5
+
+[`hicache_A5.sh`](hicache_A5.sh) and [`hicache_A3.sh`](hicache_A3.sh) are
+standalone copies adapted from the [A5 single-node mixed-deployment Wiki](https://github.com/shun8686/sglang/wiki/%5BA5%5D-DeepSeek-V4-Flash-%E5%8D%95%E6%9C%BA%E6%B7%B7%E9%83%A8), retrieved on 2026-10-23.
+They use the Wiki's DeepSeek-V4-Flash, four NPUs, TP=4/DP=4, DSPARK,
+HiCache and generated-shared-prefix benchmark configuration.
+
+- A5 retains `device_urma`.
+- A3 changes only the MemCache protocol to `device_sdma`. DeepSeek-V4/DSPARK
+  compatibility and the retained A5 extra-ops paths are **not validated on A3**.
+
+Prepare the matching SGLang/Ascend environment, model and custom operators.
+Start a compatible MemCache MetaService separately at `tcp://127.0.0.1:5006`
+with config store `tcp://127.0.0.1:6006`. The scripts retain the Wiki's
+`world_size=4` and `dram_size=30GB`; check these against the installed MemCache
+version. Serve also retains the Wiki's CPU governor and sysctl tuning, which
+requires sufficient permissions and affects the host.
+
+```bash
+# On A5, start the server; use hicache_A3.sh on A3.
+MODEL_PATH=/path/to/DeepSeek-V4-Flash \
+ASCEND_RT_VISIBLE_DEVICES=4,5,6,7 \
+  bash sglang/hicache/hicache_A5.sh serve
+
+# After the server is ready, run in another terminal with the same environment.
+MODEL_PATH=/path/to/DeepSeek-V4-Flash \
+  bash sglang/hicache/hicache_A5.sh bench
+```
+
+No argument means `serve`; `--help` prints usage without touching the host.
+Only the model path and device list have environment overrides. Edit other
+Wiki paths/settings in the scripts for the target machine. Server logs are
+written to `sglang_server_A3_<timestamp>.log` or
+`sglang_server_A5_<timestamp>.log` in the working directory.
+The Wiki's detached logging pipeline is fixed, model paths are quoted, and
+the duplicate benchmark `--backend` flag is removed. Pipeline failures return
+a nonzero exit status.
+
+Review the benchmark's `Storage (NpuMemcacheStore)` cache-hit count. These
+scripts do not automatically assert an L3 hit or output consistency and have
+not been run on NPU hardware here. They do not call the older PD round-trip
+launcher; `CONFIG_FILE`, `DRY_RUN` and `KEEP_SERVERS` belong to that older
+launcher. The remaining sections below document that separate test.
+
 ## Quick start
 
 Run these commands from the root of the `self_test` repository:
