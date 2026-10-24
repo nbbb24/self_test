@@ -1,0 +1,60 @@
+{
+  "text": " 1. **推理阶段划分**：大模型推理分为两个主要阶段",
+  "output_ids": [
+    220,
+    16,
+    13,
+    3070,
+    113272,
+    100385,
+    106761,
+    334,
+    5122,
+    26288,
+    104949,
+    113272,
+    102239,
+    100369,
+    99558,
+    100385
+  ],
+  "meta_info": {
+    "id": "d6e23cefa56a4fbb97623b2ad2d34ace",
+    "finish_reason": {
+      "type": "length",
+      "length": 16
+    },
+    "prompt_tokens": 1111,
+    "weight_version": "default",
+    "num_retractions": 0,
+    "storage_prefetch_wait": 0.023773710010573268,
+    "storage_staging_wait": 0.0,
+    "forward_entry_time": 1792770557.2028632,
+    "prefill_finished_time": 1792770557.8589308,
+    "queue_time": 0.029695260105654597,
+    "reasoning_tokens": 0,
+    "completion_tokens": 16,
+    "cached_tokens": 1024,
+    "weight_versions": [
+      {
+        "version": "default",
+        "start": 0,
+        "end": 16
+      }
+    ],
+    "cached_tokens_details": {
+      "device": 0,
+      "host": 0,
+      "storage": 1024,
+      "storage_backend": "NpuMemcacheStore"
+    },
+    "dp_rank": null,
+    "e2e_latency": 1.053194360109046,
+    "request_received_ts": 1792770557.1709356,
+    "first_token_latency": 0.6879951844457537,
+    "api_server_dispatch_finish_ts": 1792770557.172512,
+    "request_finished_ts": 1792770558.22413,
+    "decode_throughput": 41.07347715874844,
+    "response_sent_to_client_ts": 1792770558.2245173
+  }
+}

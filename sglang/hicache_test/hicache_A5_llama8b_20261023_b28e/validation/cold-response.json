@@ -1,0 +1,55 @@
+{
+  "text": " \n答案：大模型推理分为 Prefill 和 Decode 两个阶段",
+  "output_ids": [
+    720,
+    126427,
+    5232,
+    27384,
+    123123,
+    84851,
+    22649,
+    17620,
+    18184,
+    43688,
+    484,
+    59243,
+    51294,
+    220,
+    110835,
+    123854
+  ],
+  "meta_info": {
+    "id": "23448c3dc7734508a00778c56eca4e5e",
+    "finish_reason": {
+      "type": "length",
+      "length": 16
+    },
+    "prompt_tokens": 1274,
+    "weight_version": "default",
+    "num_retractions": 0,
+    "storage_prefetch_wait": 5.0165595998987556,
+    "storage_staging_wait": 0.0,
+    "forward_entry_time": 1792769923.2149,
+    "prefill_finished_time": 1792769923.8542864,
+    "queue_time": 5.016865669982508,
+    "reasoning_tokens": 0,
+    "completion_tokens": 16,
+    "cached_tokens": 0,
+    "weight_versions": [
+      {
+        "version": "default",
+        "start": 0,
+        "end": 16
+      }
+    ],
+    "cached_tokens_details": null,
+    "dp_rank": null,
+    "e2e_latency": 5.997146880021319,
+    "request_received_ts": 1792769918.1942365,
+    "first_token_latency": 5.6600500121712685,
+    "api_server_dispatch_finish_ts": 1792769918.1975021,
+    "request_finished_ts": 1792769924.1913834,
+    "decode_throughput": 44.49759529261601,
+    "response_sent_to_client_ts": 1792769924.1917207
+  }
+}

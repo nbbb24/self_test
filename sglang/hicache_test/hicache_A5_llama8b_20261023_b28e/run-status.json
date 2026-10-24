@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "model": "/home/weights/Llama-3.1-8B-Instruct",
+  "device": 4,
+  "protocol": "device_urma",
+  "meta_pid": 5451,
+  "server_pid": 5617,
+  "verify_pid": 6663,
+  "verify_exitcode": 0,
+  "server_exitcode": -9,
+  "meta_exitcode": 0,
+  "cleanup_completed": true
+}

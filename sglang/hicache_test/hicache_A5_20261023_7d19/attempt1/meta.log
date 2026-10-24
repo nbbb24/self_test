@@ -1,0 +1,101 @@
+/usr/local/python3.12.15/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.15/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.15/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+2026-10-23 15:09:08.786767 INFO [665-665][MMC mmc_meta_service_process.cpp:231 ResolveAllUrlDomains] start resolving all URL domains.
+2026-10-23 15:09:08,786 [INFO] npu_memcache.start_meta_service: MetaService setup succeeded with config=/home/sxy/hicache_A5_20261023_7d19/meta.json
+Meta service log level 1, log path: /home/sxy/hicache_A5_20261023_7d19/logs/meta/logs/mmc-meta.log, audit log path: /home/sxy/hicache_A5_20261023_7d19/logs/meta/logs/mmc-meta-audit.log, log rotation file size: 20971520, log rotation file count: 50, log output target: 0
+
+2026-10-23 15:09:08.788859 665 Log default format: yyyy-mm-dd hh:mm:ss.uuuuuu threadid loglevel msg
+2026-10-23 15:09:08.788924 665 warning [HYBM hybm_entry.cpp:167 hybm_set_extern_logger] External log function has already been set, which will be override with new log function
+
+2026-10-23 15:09:08.788933 665 Log default format: yyyy-mm-dd hh:mm:ss.uuuuuu threadid loglevel msg
+2026-10-23 15:09:08.789036 665 trace [MMC mmc_periodic_task.h:85 Start] Starting periodic task scheduler, taskCount=1
+2026-10-23 15:09:08.789114 696 info [MMC mmc_periodic_task.h:139 Run] Periodic task scheduler worker entered
+2026-10-23 15:09:08.791850 665 trace [MMC mmc_meta_service.cpp:132 Start] Meta backup channel starting, ha=0, async_flush_interval=200
+2026-10-23 15:09:08.798988 794 trace [AccLink acc_tcp_link_delay_cleanup.h:116 RunInThread] AccDelay cleanup thread thread started
+2026-10-23 15:09:08.799100 795 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name AccWrk, index 0, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.799229 796 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name AccWrk, index 1, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.799438 797 trace [AccLink acc_tcp_listener.cpp:147 RunInThread] Acc listener accept thread for 127.0.0.1:6006 start ...
+2026-10-23 15:09:08.799763 665 info [SMEM smem_tcp_config_store.cpp:294 Startup] start store server success, ip:127.0.0.1:6006
+2026-10-23 15:09:08.799782 665 trace [MMC mmc_meta_service.cpp:168 Start] Config store server started, broken handler registered
+2026-10-23 15:09:08.799786 665 trace [MMC mmc_meta_service.cpp:610 RegisterHaLeaderCallback] ConfigStore is not HaConfigStore, HA leader callback not registered
+2026-10-23 15:09:08.799793 665 info [MMC mmc_meta_service.cpp:643 StartMetaNetServer] MetaNetServer binding on 127.0.0.1:5006
+2026-10-23 15:09:08.799955 665 trace [MMC mmc_net_ctx_store.h:70 Initialize] Initialized context store, flatten capacity 65536, versionAndSeqMask 4194303, seqNoMask 65535, seqNoAndVersionIndex 1
+2026-10-23 15:09:08.800105 804 trace [AccLink acc_tcp_link_delay_cleanup.h:116 RunInThread] AccDelay cleanup thread thread started
+2026-10-23 15:09:08.800216 805 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name AccWrk, index 0, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.800336 806 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name AccWrk, index 1, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.800470 807 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name AccWrk, index 2, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.800590 808 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name AccWrk, index 3, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.800743 809 trace [AccLink acc_tcp_listener.cpp:147 RunInThread] Acc listener accept thread for 127.0.0.1:5006 start ...
+2026-10-23 15:09:08.801596 665 trace [MMC mmc_meta_net_server.cpp:112 Start] initialize meta net server success [meta_service_MetaServer]
+2026-10-23 15:09:08.801607 665 trace [MMC mmc_meta_service.cpp:200 Start] Started MetaService (meta_service) at tcp://127.0.0.1:5006, metaNetServerPending=0
+2026-10-23 15:09:08.801610 665 info [MMC mmc_meta_service.cpp:529 StartMetricsReportTask] Metrics report task disabled by config
+2026-10-23 15:09:08.801632 665 trace [MMC mmc_meta_service_process.cpp:676 StartHttpServer] Starting HTTP server on 127.0.0.1:18006
+2026-10-23 15:09:08.801634 665 info [MMC mmc_meta_service_process.cpp:678 StartHttpServer] HA snapshot provider will return default state because leader election is not initialized
+2026-10-23 15:09:08.801753 826 trace [AccLink acc_tcp_link_delay_cleanup.h:116 RunInThread] AccDelay cleanup thread thread started
+2026-10-23 15:09:08.801871 827 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name HttpWrk, index 0, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.801980 828 trace [AccLink acc_tcp_worker.cpp:154 RunInThread] Worker [name HttpWrk, index 1, cpu -1, thread-priority 0, poll-timeout-ms 500] progress thread started
+2026-10-23 15:09:08.802116 829 info [AccLink acc_http_server_default.cpp:294 IdleCheckLoop] IdleCheckLoop thread started
+2026-10-23 15:09:08.802160 830 trace [AccLink acc_tcp_listener.cpp:147 RunInThread] Acc listener accept thread for 127.0.0.1:18006 start ...
+2026-10-23 15:09:08.802295 665 trace [MMC mmc_http_server.cpp:631 Start] HTTP server started on 127.0.0.1:18006
+2026-10-23 15:09:08.802302 665 warning [MMC mmc_meta_service_process.cpp:132 MainForPython] Meta Service launched successfully
+2026-10-23 15:09:09.401491 809 error [AccLink acc_tcp_listener.cpp:206 ProcessNewConnection] Failed to read header from the socket connected from 127.0.0.1:49762
+2026-10-23 15:10:22.840653 797 trace [AccLink acc_tcp_listener.cpp:221 ProcessNewConnection] Connected from 127.0.0.1:56944 successfully, ssl disable
+2026-10-23 15:10:22.840691 797 trace [SMEM smem_tcp_config_store_server.cpp:333 LinkConnectedHandler] l:0 ws:4 r:4294967295 rec:0
+2026-10-23 15:10:22.840696 797 trace [SMEM smem_tcp_config_store_server.cpp:339 LinkConnectedHandler] Success to fix world size:4
+2026-10-23 15:10:22.840699 797 trace [SMEM smem_tcp_config_store_server.cpp:282 CanReceiveNewLink] change server state from INITED to NORMAL
+2026-10-23 15:10:22.840925 796 info [SMEM smem_tcp_config_store_server.cpp:562 AllocateAndReplyRank] AllocAndReply: idx=0 ws=4 alive=[]
+2026-10-23 15:10:22.840943 796 info [SMEM smem_tcp_config_store_server.cpp:595 FindFreeRankIndex] AllocAndReply prePersist idx=0 alive=1
+2026-10-23 15:10:22.840946 796 info [SMEM smem_tcp_config_store_server.cpp:1441 PersistAliveRankIds] PersistRanks n=1 dist=0
+2026-10-23 15:10:22.840948 796 info [SMEM smem_tcp_config_store_server.cpp:603 FindFreeRankIndex] PersistAliveRanks OK idx=0 aSize=1
+2026-10-23 15:10:22.840951 796 info [SMEM smem_tcp_config_store_server.cpp:579 AllocateAndReplyRank] FindOrInsertRank ok link:0 rank:0 ws:4
+2026-10-23 15:10:23.082870 796 info [SMEM smem_group_manager_server.cpp:110 CheckIn] [GM][Server][Recv] RCV rank=0 type=JOINREQ reqId=4294967296, role=provider
+2026-10-23 15:10:23.089350 801 info [SMEM smem_group_manager_server.cpp:507 PromoteCheckedInRanks] rank=0 state=ACTIVE (all links stable, enough connected)
+2026-10-23 15:10:23.089408 801 info [SMEM smem_group_manager_server.cpp:678 DrivePendingTransitions] [GM][Server][Send] rank=0 type=PROMOTE_TO_ACTIVE
+2026-10-23 15:10:23.091454 809 trace [AccLink acc_tcp_listener.cpp:221 ProcessNewConnection] Connected from 127.0.0.1:38276 successfully, ssl disable
+2026-10-23 15:10:23.091480 809 info [MMC mmc_net_engine_acc.cpp:506 HandleNewLink] HandleNewLink with peer rankId: 0, linkId: 1
+2026-10-23 15:10:23.091485 809 trace [MMC mmc_meta_net_server.cpp:187 HandleNewLink] meta_service_MetaServer new link, id: 0
+2026-10-23 15:10:23.091993 811 info [MMC mmc_meta_metric_manager.cpp:35 operator()] MMC_ENABLE_PER_RANK_METRICS=(unset), enabled=0
+2026-10-23 15:10:23.092010 811 info [MMC mmc_global_allocator.h:167 Mount] GlobalAllocator Mount loc{rank=0,media=DRAM} enableMaxValueMode:0
+2026-10-23 15:10:23.092017 811 trace [MMC mmc_global_allocator.h:170 Mount] Mount bm on loc{rank=0,media=DRAM}, capacity:2147483648  successfully
+2026-10-23 15:10:23.092022 811 trace [MMC mmc_meta_service.cpp:256 BmRegister] Mount loc {rank:0, rebuild size:0, mediaNum:1} finish
+2026-10-23 15:10:23.092029 811 trace [MMC mmc_meta_net_server.cpp:131 HandleBmRegister] HandleBmRegister rank: 0, storageEnabled: 0, rebuild blob size: 0, ret: 0
+2026-10-23 15:10:30.559482 818 trace [MMC mmc_global_allocator.h:213 Stop] Stop one bm successfully, loc: loc{rank=0,media=DRAM}
+2026-10-23 15:10:30.559535 818 trace [MMC mmc_meta_manager.cpp:1945 RemoveBlobs] Remove blobs for rank=0, media=1 done, freedBlobs=1, erasedKeys=1
+2026-10-23 15:10:30.559553 818 trace [MMC mmc_meta_net_server.cpp:160 HandleBmUnregister] HandleBmUnregister: loc{rank=0,media=DRAM}, ret:0
+2026-10-23 15:10:30.559756 796 info [SMEM smem_group_manager_server.cpp:279 Checkout] [GM][Server] rank=0 Checkout reason=client-leavreq reqId=4294967297
+2026-10-23 15:10:30.559774 796 info [SMEM smem_group_manager_server.cpp:302 Checkout] rank=0 LEAVE done, notify peers=0
+2026-10-23 15:10:31.060440 796 warning [MMC mmc_meta_service.cpp:161 operator()] HeartBeat timeout for rank=0, linkId=0, clearing resource
+2026-10-23 15:10:31.060465 796 trace [MMC mmc_meta_manager.cpp:1945 RemoveBlobs] Remove blobs for rank=0, media=2 done, freedBlobs=0, erasedKeys=0
+2026-10-23 15:10:31.060470 796 trace [MMC mmc_meta_service.cpp:345 ClearResource] Remove client metrics for rank=0
+2026-10-23 15:10:31.060477 796 info [SMEM smem_tcp_config_store_server.cpp:1441 PersistAliveRankIds] PersistRanks n=0 dist=0
+2026-10-23 15:10:31.060480 796 trace [SMEM smem_tcp_config_store_server.cpp:412 LinkBrokenHandler] link broken, linkId: 0 remove rankId: 0
+2026-10-23 15:10:31.060482 796 trace [SMEM smem_tcp_config_store_server.cpp:416 LinkBrokenHandler] all client link broken, will clear data
+2026-10-23 15:10:31.060488 796 info [SMEM smem_group_manager_server.cpp:776 OnLinkBroken] [GM][Server][Recv] RCV rank=0 type=LEAVREQ reason=LinkBroken
+2026-10-23 15:10:32.095733 806 trace [MMC mmc_meta_manager.cpp:1945 RemoveBlobs] Remove blobs for rank=0, media=2 done, freedBlobs=0, erasedKeys=0
+2026-10-23 15:10:32.095760 806 trace [MMC mmc_meta_service.cpp:345 ClearResource] Remove client metrics for rank=0
+Received exit signal[15]
+2026-10-23 15:11:37.890229 665 trace [MMC mmc_periodic_task.h:123 UnregisterTask] Unregistered periodic task: log_file_reopen
+2026-10-23 15:11:37.890249 665 trace [MMC mmc_periodic_task.h:123 UnregisterTask] Unregistered periodic task: evict_check
+2026-10-23 15:11:37.890321 793 trace [MMC mmc_meta_backup_mgr_default.cpp:40 BackupThreadFunc] backup thread destroy, thread id 281469576868096
+2026-10-23 15:11:37.891270 665 trace [MMC mmc_meta_backup_mgr_default.h:125 Stop] Stop MMCMetaBackUpMgr
+2026-10-23 15:11:37.892526 665 trace [MMC mmc_meta_manager.h:212 Stop] Stop MmcMetaManager
+2026-10-23 15:11:38.166720 809 warning [AccLink acc_tcp_listener.cpp:162 RunInThread] Acc listener accept thread get stop signal, will exit...
+2026-10-23 15:11:38.166757 809 trace [AccLink acc_tcp_listener.cpp:193 RunInThread] Working thread for AccTcpStore listener at 127.0.0.1:5006 exiting
+2026-10-23 15:11:38.987144 665 trace [SMEM smem_tcp_config_store_server.cpp:198 Shutdown] start to shutdown Acc Store Server
+2026-10-23 15:11:39.415696 797 warning [AccLink acc_tcp_listener.cpp:162 RunInThread] Acc listener accept thread get stop signal, will exit...
+2026-10-23 15:11:39.415735 797 trace [AccLink acc_tcp_listener.cpp:193 RunInThread] Working thread for AccTcpStore listener at 127.0.0.1:6006 exiting
+2026-10-23 15:11:39.685523 800 trace [SMEM smem_tcp_config_store_server.cpp:1321 CheckerThreadTask] checker thread exit
+2026-10-23 15:11:39.685610 665 trace [SMEM smem_tcp_config_store_server.cpp:238 Shutdown] finished shutdown Acc Store Server
+2026-10-23 15:11:39.687410 665 trace [MMC mmc_meta_service.cpp:509 Stop] Stop MmcMetaServiceDefault (meta_service) at tcp://127.0.0.1:5006
+2026-10-23 15:11:39.687452 829 info [AccLink acc_http_server_default.cpp:318 IdleCheckLoop] IdleCheckLoop thread stopped
+2026-10-23 15:11:39.953819 830 warning [AccLink acc_tcp_listener.cpp:162 RunInThread] Acc listener accept thread get stop signal, will exit...
+2026-10-23 15:11:39.953849 830 trace [AccLink acc_tcp_listener.cpp:193 RunInThread] Working thread for AccTcpStore listener at 127.0.0.1:18006 exiting
+2026-10-23 15:11:40.487373 665 trace [MMC mmc_http_server.cpp:669 Stop] HTTP server stopped
+2026-10-23 15:11:40.487403 665 trace [MMC mmc_http_server.cpp:669 Stop] HTTP server stopped
+2026-10-23 15:11:40.488616 696 info [MMC mmc_periodic_task.h:190 Run] Periodic task scheduler worker exiting
+2026-10-23 15:11:40.488682 665 trace [MMC mmc_periodic_task.h:106 Stop] Periodic task scheduler stopped
+2026-10-23 15:11:40.488697 665 warning [MMC mmc_meta_service_process.cpp:147 MainForPython] Meta Service stopped

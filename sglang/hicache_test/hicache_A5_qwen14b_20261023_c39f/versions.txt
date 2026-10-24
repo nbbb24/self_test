@@ -1,0 +1,58 @@
+d0a75654368a470d8484e3ea45b06e500fee57af
+ M python/pyproject.toml
+ D python/pyproject_npu.toml
+Name: sglang
+Version: 0.5.23.dev636+gd0a756543
+Summary: SGLang is a fast serving framework for large language models and vision language models.
+Home-page: https://github.com/sgl-project/sglang
+Author: 
+Author-email: 
+License: 
+Location: /usr/local/python3.12.15/lib/python3.12/site-packages
+Editable project location: /sgl-workspace/sglang/python
+Requires: aiohttp, anthropic, av, blobfile, build, compressed-tensors, datasets, decord2, easydict, einops, fastapi, gguf, hf_transfer, huggingface_hub, interegular, IPython, llguidance, mistral_common, modelscope, msgspec, ninja, numpy, openai, openai-harmony, orjson, outlines, packaging, partial_json_parser, pillow, prometheus-client, psutil, py-spy, pybase64, pydantic, python-multipart, pyzmq, regex, requests, scipy, sentencepiece, setproctitle, smg-grpc-servicer, soundfile, tiktoken, timm, tqdm, transformers, uvicorn, uvloop, xgrammar, xxhash
+Required-by: 
+---
+Name: memcache_hybrid
+Version: 1.3.0
+Summary: Python bindings for memcache_hybrid implemented with pybind11
+Home-page: https://gitcode.com/Ascend/memcache
+Author: 
+Author-email: 
+License: Mulan PSL v2
+Location: /usr/local/python3.12.15/lib/python3.12/site-packages
+Requires: memfabric_hybrid
+Required-by: 
+---
+Name: memfabric_hybrid
+Version: 1.3.0
+Summary: python api for memfabric hybrid
+Home-page: https://gitcode.com/Ascend/memfabric_hybrid
+Author: 
+Author-email: 
+License: Mulan PSL v2
+Location: /usr/local/python3.12.15/lib/python3.12/site-packages
+Requires: 
+Required-by: memcache_hybrid
+---
+Name: torch
+Version: 2.13.0+cpu
+Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Home-page: https://pytorch.org
+Author: 
+Author-email: PyTorch Team <packages@pytorch.org>
+License-Expression: Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT
+Location: /usr/local/python3.12.15/lib/python3.12/site-packages
+Requires: filelock, fsspec, jinja2, networkx, setuptools, sympy, typing-extensions
+Required-by: cache_dit, cann_ops_nn, cann_ops_transformer, compressed-tensors, deep_ep, outlines, timm, torch_npu, torchvision, xgrammar
+---
+Name: torch_npu
+Version: 2.13.0
+Summary: NPU bridge for PyTorch
+Home-page: https://gitcode.com/ascend/pytorch
+Author: 
+Author-email: 
+License: BSD License
+Location: /usr/local/python3.12.15/lib/python3.12/site-packages
+Requires: numpy, pyyaml, torch
+Required-by: cann_ops_nn, cann_ops_transformer

@@ -1,0 +1,25 @@
+[2026-10-23 15:38:24] Load weight end. elapsed=12.06 s, type=LlamaForCausalLM, avail mem=105.56 GB, mem usage=16.47 GB.
+2026-10-23 15:38:28.059665 TRACE [5802-5802][MMC smem_bm_api.cpp:98 LoadLibrary] MFSmemApi LoadLibrary: dlopen libmf_smem.so
+2026-10-23 15:38:28.059746 TRACE [5802-5802][MMC smem_bm_api.cpp:120 LoadLibrary] MFSmemApi LoadLibrary: loaded 23 smem_bm symbols from libmf_smem.so
+2026-10-23 15:38:28.071670 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:448 InitLocalDeviceInfoLocked] aclrtGetPhyDevIdByLogicDevId: userId=0, phyId=4
+2026-10-23 15:38:28.071700 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:467 InitLocalDeviceInfoLocked] local device info: userId=0, phyId=4 sdid=4291821572, server_id=4, superpod id=16383
+2026-10-23 15:38:28.074637 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:484 InitLocalDeviceInfoLocked] device_urma selected protocol=UBC_CTP mainboardId=3 deviceId=0 rankId=0
+2026-10-23 15:38:28.074644 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:718 OpenEndpointResourcesLocked] device_urma OpenDevice protocol=UBC_CTP, rankId=0, phyDeviceId=4, mainboardId=3
+2026-10-23 15:38:28.074660 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:553 BuildLocalEndpointDescLocked] device_urma local endpoint address protocol=UBC_CTP phyDeviceId=4 rankId=0 eid=00000000003f020000100000df148b01
+2026-10-23 15:38:28.237617 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:523 InitDeviceTransferFlagLocked] device_urma local flag buffer allocated and registered, addr: 0x120000017000 size: 8 handle: 0xaaaae081fae0 endpoint:0xaaaafd3f14e0 localId:36
+2026-10-23 15:38:28.237622 INFO [5802-5802][HYBM hybm_kernel_hepler.cpp:38 GetKernelFilePath] device_urma kernel json path: /usr/local/Ascend/cann-9.2.0/opp/vendors/cust/op_impl/aicpu/hybm/config/libcann_hybm_kernel.json
+2026-10-23 15:38:28.238402 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:893 InitNotifyResource] device_urma InitNotifyResource success, notifyId: 16 addr: 0x3ffffc8f000 len: 4 endpoint:0xaaaafd3f14e0
+2026-10-23 15:38:28.238411 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:789 OpenDevice] device_urma OpenDevice success, rank: 0 rankCount: 4 devPhyId: 4
+2026-10-23 15:38:28.238431 INFO [5802-5802][HYBM hybm_data_op_device_urma.cpp:59 Initialize] HYBM_URMA_SWAP_SPACE_SIZE is 0, skip swap memory allocation
+2026-10-23 15:38:28.301322 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:1399 RegisterMemoryRegion] device_urma registerMem success, addr: 0x400040000000 len: 2147483648 endpoint:0xaaaafd3f14e0 localId:36
+[2026-10-23 15:38:28] Ascend MemCache store initialized (tp_rank=0, device_id=0, init_bm=True)
+2026-10-23 15:38:28.333837 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:1399 RegisterMemoryRegion] device_urma registerMem success, addr: 0x100003000000 len: 2013265920 endpoint:0xaaaafd3f14e0 localId:36
+[2026-10-23 15:38:35] INFO:     127.0.0.1:41234 - "POST /generate HTTP/1.1" 200 OK
+[2026-10-23 15:38:38] INFO:     127.0.0.1:41286 - "POST /hicache/storage-backend/clear HTTP/1.1" 200 OK
+[2026-10-23 15:38:38] INFO:     127.0.0.1:41294 - "POST /flush_cache?timeout=60 HTTP/1.1" 200 OK
+[2026-10-23 15:38:44] INFO:     127.0.0.1:41302 - "POST /generate HTTP/1.1" 200 OK
+[2026-10-23 15:38:54] INFO:     127.0.0.1:42952 - "POST /flush_cache?timeout=60 HTTP/1.1" 200 OK
+[2026-10-23 15:38:55] INFO:     127.0.0.1:42960 - "POST /generate HTTP/1.1" 200 OK
+2026-10-23 15:38:55.253287 INFO [5802-5802][HYBM device_urma_transport_manager.cpp:1130 CloseDevice] device_urma CloseDevice success
+2026-10-23 15:38:55.253317 INFO [5802-5802][SMEM smem_bm.cpp:429 smem_bm_destroy] smem_bm_destroy success, handle: 0xaaab06470d10
+2026-10-23 15:38:56.277317 TRACE [5802-5802][MMC smem_bm_api.cpp:167 CleanupLibrary] MFSmemApi CleanupLibrary: unloaded libmf_smem.so

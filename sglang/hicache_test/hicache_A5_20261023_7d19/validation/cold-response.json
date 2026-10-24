@@ -1,0 +1,55 @@
+{
+  "text": " 用中文总结，每点不超过100字，用中文标",
+  "output_ids": [
+    220,
+    11622,
+    104811,
+    102050,
+    3837,
+    73157,
+    27442,
+    106070,
+    16,
+    15,
+    15,
+    18600,
+    3837,
+    11622,
+    104811,
+    30844
+  ],
+  "meta_info": {
+    "id": "764f6486c75c4bc488cbc681d18e5e17",
+    "finish_reason": {
+      "type": "length",
+      "length": 16
+    },
+    "prompt_tokens": 1111,
+    "weight_version": "default",
+    "num_retractions": 0,
+    "storage_prefetch_wait": 5.054726399946958,
+    "storage_staging_wait": 0.0,
+    "forward_entry_time": 1792768777.3606555,
+    "prefill_finished_time": 1792768777.978775,
+    "queue_time": 5.055032660020515,
+    "reasoning_tokens": 0,
+    "completion_tokens": 16,
+    "cached_tokens": 0,
+    "weight_versions": [
+      {
+        "version": "default",
+        "start": 0,
+        "end": 16
+      }
+    ],
+    "cached_tokens_details": null,
+    "dp_rank": null,
+    "e2e_latency": 5.983302650041878,
+    "request_received_ts": 1792768772.3032835,
+    "first_token_latency": 5.675491534173489,
+    "api_server_dispatch_finish_ts": 1792768772.3049924,
+    "request_finished_ts": 1792768778.286586,
+    "decode_throughput": 48.731183595115944,
+    "response_sent_to_client_ts": 1792768778.2868562
+  }
+}

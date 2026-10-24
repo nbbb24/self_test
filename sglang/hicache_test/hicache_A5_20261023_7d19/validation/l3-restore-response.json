@@ -1,0 +1,60 @@
+{
+  "text": " 用中文总结，每点不超过100字，用中文标",
+  "output_ids": [
+    220,
+    11622,
+    104811,
+    102050,
+    3837,
+    73157,
+    27442,
+    106070,
+    16,
+    15,
+    15,
+    18600,
+    3837,
+    11622,
+    104811,
+    30844
+  ],
+  "meta_info": {
+    "id": "660a86a464524b88948036f1650dcc08",
+    "finish_reason": {
+      "type": "length",
+      "length": 16
+    },
+    "prompt_tokens": 1111,
+    "weight_version": "default",
+    "num_retractions": 0,
+    "storage_prefetch_wait": 0.02017642999999225,
+    "storage_staging_wait": 0.0,
+    "forward_entry_time": 1792768788.3795817,
+    "prefill_finished_time": 1792768788.9938712,
+    "queue_time": 0.026032069930806756,
+    "reasoning_tokens": 0,
+    "completion_tokens": 16,
+    "cached_tokens": 1024,
+    "weight_versions": [
+      {
+        "version": "default",
+        "start": 0,
+        "end": 16
+      }
+    ],
+    "cached_tokens_details": {
+      "device": 0,
+      "host": 0,
+      "storage": 1024,
+      "storage_backend": "NpuMemcacheStore"
+    },
+    "dp_rank": null,
+    "e2e_latency": 0.8970981598831713,
+    "request_received_ts": 1792768788.3513083,
+    "first_token_latency": 0.6425628417637199,
+    "api_server_dispatch_finish_ts": 1792768788.3528745,
+    "request_finished_ts": 1792768789.2484066,
+    "decode_throughput": 58.93091815635824,
+    "response_sent_to_client_ts": 1792768789.248755
+  }
+}

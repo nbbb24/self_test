@@ -1,0 +1,32 @@
+{
+  "7081": {
+    "name": "python3",
+    "libraries": [
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so"
+    ]
+  },
+  "7265": {
+    "name": "python3",
+    "libraries": [
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so"
+    ]
+  },
+  "7266": {
+    "name": "sglang::scheduler",
+    "libraries": [
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/memcache_hybrid.libs/libmf_memcache-377076e0.so",
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/memcache_hybrid/_pymmc.cpython-312-aarch64-linux-gnu.so",
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/memcache_hybrid/lib/libmf_memcache.so",
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/memfabric_hybrid/lib/libmf_acc_offload.so",
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/memfabric_hybrid/lib/libmf_hybm_core.so",
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/memfabric_hybrid/lib/libmf_smem.so",
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so"
+    ]
+  },
+  "7267": {
+    "name": "sglang::detokenizer",
+    "libraries": [
+      "/usr/local/python3.12.15/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so"
+    ]
+  }
+}

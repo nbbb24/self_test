@@ -1,0 +1,1 @@
+{"meta_service_url":"tcp://127.0.0.1:5006","config_store_url":"tcp://127.0.0.1:6006","world_size":4,"protocol":"device_urma","dram_size":"2GB","max_dram_size":"1TB","log_level":"info"}

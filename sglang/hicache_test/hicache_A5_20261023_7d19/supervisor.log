@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/sxy/hicache_A5_20261023_7d19/supervisor.py", line 31, in <module>
+    if rc:raise RuntimeError('Verifier failed: '+str(rc))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Verifier failed: 1

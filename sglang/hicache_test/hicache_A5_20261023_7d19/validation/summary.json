@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "validation_method": "postprocess saved live responses after verifier schema parsing failure",
+  "model": "/home/weights/Qwen3-0.6B",
+  "npu": 4,
+  "protocol": "device_urma",
+  "prompt_tokens": 1111,
+  "cold_storage_tokens": 0,
+  "restored_storage_tokens": 1024,
+  "output_tokens": 16,
+  "checks": {
+    "cold_storage_miss": true,
+    "same_prompt_length": true,
+    "l3_hit_at_least_256_tokens": true,
+    "l1_l2_hits_zero": true,
+    "backend_is_npu_memcache": true,
+    "nonempty_output_ids_match": true,
+    "output_text_match": true
+  },
+  "raw_response_sha256": {
+    "cold-response.json": "b1698b721d5b2bcc8cdfa596f1389952a6db00385441965b83dbc3b2645c79f0",
+    "l3-restore-response.json": "cf839cfab0bd3cbbc126781491ff3b4d74d610c67f6a7019b9019cb905cd31ec"
+  },
+  "scope": "single-NPU basic HiCache; not DeepSeek-V4/DSPARK or four-NPU performance"
+}

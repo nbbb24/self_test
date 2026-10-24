@@ -1,0 +1,17 @@
+[1/5] Clearing L3 and flushing L1/L2 for a clean baseline ...
+[2/5] Sending the cold request (expected L3 miss) ...
+      cold: cached=0/1111, details={}
+[3/5] Waiting 10s for write-through backup ...
+[4/5] Flushing L1/L2 while preserving MemCache L3 ...
+[5/5] Replaying the prompt (must restore from L3) ...
+Traceback (most recent call last):
+  File "/home/sxy/hicache_A5_20261023_7d19/verify.py", line 233, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/sxy/hicache_A5_20261023_7d19/verify.py", line 173, in main
+    warm_prompt, warm_cached, warm_details = _cache_stats(warm)
+                                             ^^^^^^^^^^^^^^^^^^
+  File "/home/sxy/hicache_A5_20261023_7d19/verify.py", line 71, in _cache_stats
+    details = {key: int(value) for key, value in raw_details.items()}
+                    ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'NpuMemcacheStore'

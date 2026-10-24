@@ -1,0 +1,46 @@
+[1/5] Clearing L3 and flushing L1/L2 for a clean baseline ...
+[2/5] Sending the cold request (expected L3 miss) ...
+      cold: cached=0/1274, details={'device': 0, 'host': 0, 'storage': 0}
+[3/5] Waiting 10s for write-through backup ...
+[4/5] Flushing L1/L2 while preserving MemCache L3 ...
+[5/5] Replaying the prompt (must restore from L3) ...
+      restore: cached=1152/1274, details={'device': 0, 'host': 0, 'storage': 1152}
+      metric evidence:
+        sglang:backup_pgs_sum{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 10.0
+        sglang:backup_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="1.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:backup_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="5.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:backup_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="10.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="50.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="100.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="+Inf",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_pgs_count{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_bandwidth_sum{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 10.63093403670306
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="0.1",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="0.5",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="1.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="5.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="10.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="50.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="100.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="+Inf",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:backup_bandwidth_count{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 2.0
+        sglang:prefetch_pgs_sum{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 9.0
+        sglang:prefetch_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="1.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:prefetch_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="5.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:prefetch_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="10.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="50.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="100.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_pgs_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="+Inf",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_pgs_count{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_bandwidth_sum{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 4.517816831639324
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="0.1",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="0.5",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="1.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 0.0
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="5.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="10.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="50.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="100.0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_bandwidth_bucket{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",le="+Inf",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+        sglang:prefetch_bandwidth_count{attn_cp_rank="0",attn_cp_size="1",dp_rank="0",pp_rank="0",pp_size="1",storage_backend="npu_memcache",tp_rank="0"} 1.0
+
+PASS: restored 1152 prompt tokens from NPU MemCache L3; generated output is identical.

@@ -1,0 +1,12 @@
+{
+  "status": "FAILED",
+  "model": "/home/weights/Qwen3-0.6B",
+  "device": 4,
+  "protocol": "device_urma",
+  "meta_pid": 3077,
+  "server_pid": 3243,
+  "error": "SGLang exited: -9",
+  "server_exitcode": -9,
+  "meta_exitcode": 0,
+  "cleanup_completed": true
+}

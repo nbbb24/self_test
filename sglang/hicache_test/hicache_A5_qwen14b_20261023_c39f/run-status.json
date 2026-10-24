@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "model": "/home/weights/Qwen3-14B",
+  "device": 4,
+  "protocol": "device_urma",
+  "meta_pid": 6915,
+  "server_pid": 7081,
+  "verify_pid": 8151,
+  "verify_exitcode": 0,
+  "server_exitcode": -9,
+  "meta_exitcode": 0,
+  "cleanup_completed": true
+}

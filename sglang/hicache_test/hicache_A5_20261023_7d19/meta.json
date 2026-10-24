@@ -1,0 +1,1 @@
+{"meta_service_url":"tcp://127.0.0.1:5006","config_store_url":"tcp://127.0.0.1:6006","metrics_url":"http://127.0.0.1:18006","log_level":"info","log_path":"/home/sxy/hicache_A5_20261023_7d19/logs/meta","log_output_target":"screen"}

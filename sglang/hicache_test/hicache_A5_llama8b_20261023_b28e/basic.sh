@@ -1,0 +1,30 @@
+#!/bin/bash
+set -eo pipefail
+source /home/sxy/hicache_A5_llama8b_20261023_b28e/runtime.env
+source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
+source /usr/local/Ascend/nnal/atb/set_env.sh
+source /usr/local/Ascend/ascend-toolkit/latest/opp/vendors/customize/bin/set_env.bash
+source /usr/local/Ascend/ascend-toolkit/latest/opp/vendors/custom_transformer/bin/set_env.bash
+export ASCEND_RT_VISIBLE_DEVICES=4
+export ASCEND_USE_FIA=1
+export SGLANG_SET_CPU_AFFINITY=0
+export CC="$RUN/clang-private.sh"
+export PYTHONPATH="$RUN/python:${PYTHONPATH:-}"
+export GLOO_SOCKET_IFNAME=lo
+export ASCEND_GLOBAL_LOG_LEVEL=3
+export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+export SGLANG_NPU_MEMCACHE_ENABLE_WARMUP=1
+exec python3 -B -m sglang.launch_server \
+  --model-path /home/weights/Llama-3.1-8B-Instruct \
+  --device npu --attention-backend ascend --tp-size 1 \
+  --host 127.0.0.1 --port 31000 \
+  --mem-fraction-static 0.30 --max-total-tokens 4096 \
+  --context-length 4096 --max-running-requests 2 --chunked-prefill-size 2048 \
+  --disable-cuda-graph --page-size 128 \
+  --enable-metrics --enable-cache-report --return-output-ids \
+  --enable-hierarchical-cache --hicache-size 2 \
+  --hicache-io-backend kernel_ascend --hicache-mem-layout page_first_kv_split \
+  --hicache-write-policy write_through \
+  --hicache-storage-backend npu_memcache \
+  --hicache-storage-prefetch-policy wait_complete \
+  --hicache-storage-backend-extra-config @/home/sxy/hicache_A5_llama8b_20261023_b28e/local.json

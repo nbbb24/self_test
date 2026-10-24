@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "model": "/home/weights/Qwen3-0.6B",
+  "device": 4,
+  "protocol": "device_urma",
+  "error": "[Errno 98] Address already in use",
+  "cleanup_completed": true
+}

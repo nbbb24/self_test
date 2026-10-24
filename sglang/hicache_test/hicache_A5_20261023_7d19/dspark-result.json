@@ -1,0 +1,4 @@
+{
+  "status": "FAILED_PREFLIGHT",
+  "error": "DSpark draft requires markov_rank > 0; got markov_rank=0."
+}
