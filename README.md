@@ -15,6 +15,7 @@ services.
 | --- | --- |
 | [`sglang/`](sglang/) | SGLang deployment and feature validation scripts. |
 | [`vllm/`](vllm/) | vLLM validation scripts and experiments. |
+| [`memfabric/h2d_d2h/`](memfabric/h2d_d2h/) | Python allocation/copy interfaces and local H2D/D2H validation for MemFabric. |
 
 Each test directory should contain:
 
