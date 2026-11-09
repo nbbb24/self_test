@@ -1,0 +1,3 @@
+export IMG=hub.i.basemind.com/stepcast/stepcast:0.30.0rc2-vllm-2314b62c-ascend-66e7b7c8-20261103-123846-platform
+
+sudo -n docker run -d --name vllm --restart no --privileged --network host --ipc host --ulimit memlock=-1:-1 --shm-size 32g  -v /usr/local/Ascend/driver:/usr/local/Ascend/driver:ro  -v /usr/local/dcmi:/usr/local/dcmi:ro  -v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi:ro -v /data/models/Step-5-Preview-w8a8-mxfp8:/model/target:ro  -v /home:/home --entrypoint /bin/bash "$IMG" -c 'sleep infinity'

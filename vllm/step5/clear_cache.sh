@@ -1,0 +1,1 @@
+curl -X POST http://10.208.128.50:19289/reset_prefix_cache

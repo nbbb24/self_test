@@ -1,0 +1,21 @@
+{
+    "log_level":"error",
+    "metadata_type": "p2p",
+    "rpc_server_port": 0,
+    "transports": {
+        "memfabric":     { "enable": true },
+        "ascend_direct": { "enable": false },
+        "rdma":          { "enable": false },
+        "tcp":           { "enable": false },
+        "shm":           { "enable": false },
+        "gds":           { "enable": false },
+        "hp_tcp":        { "enable": false }
+    },
+    "policy": [
+        {
+            "name": "default_memory",
+            "segment_type": "memory",
+            "transports": ["memfabric"]
+        }
+    ]
+}
