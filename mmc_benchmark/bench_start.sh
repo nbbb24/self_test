@@ -5,17 +5,17 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 source /usr/local/memcache_hybrid/set_env.sh
 source /usr/local/memfabric_hybrid/set_env.sh
 export HCOM_SET_LOG_LEVEL=3
-export MMC_LOCAL_CONFIG_PATH=$PWD/mmc-local.conf
-export ASCEND_RT_VISIBLE_DEVICES=4,5,6,7
+# export MMC_LOCAL_CONFIG_PATH=$PWD/mmc-local.conf
+# export ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 
 # 解析入参
-TEST_CASE="write_read_same_process"
-PROCESS_COUNT=4
-BATCH_SIZE=2000
+TEST_CASE="read"
+PROCESS_COUNT=1
+BATCH_SIZE=16
 BLOCK_SIZE=1048576
-CALL_COUNT=5
-WARMUP_COUNT=0
-DATA_DIM=2
+CALL_COUNT=100
+WARMUP_COUNT=2
+DATA_DIM=1
 BACKEND="memcache"
 LOCAL_TYPE="npu"
 
