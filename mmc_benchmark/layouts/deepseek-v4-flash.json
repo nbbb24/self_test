@@ -1,0 +1,1011 @@
+{
+  "schema": 1,
+  "metadata": {
+    "model": "deepseek-v4-flash",
+    "batch_size": 32,
+    "block_size": 128,
+    "request_tokens": 16384,
+    "transfer_granularity": 16384,
+    "tp": 1,
+    "pp": 1,
+    "mode": "bulk",
+    "main_cache_dtype": "torch.bfloat16",
+    "indexer_dtype": "fp8",
+    "construction": "vLLM spec/planner/allocator/reshape and KVPoolWorker metadata; no weights or forward",
+    "vllm_ascend_commit": "70a336fd1697e710f476747e40465a1a48baf079",
+    "model_config_sha256": "6c6cdc4a47e00e41137081429b95bd5c1cf91ba62e87309d1398431de7f4a8e1",
+    "group_families": [
+      "default",
+      "default",
+      "c1",
+      "c1"
+    ],
+    "selected_chunks": {
+      "0": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "1": [
+        0
+      ],
+      "2": [
+        127
+      ],
+      "3": [
+        127
+      ]
+    },
+    "group_blocks": {
+      "0": {
+        "start": 0,
+        "count": 32,
+        "tokens_per_block": 512
+      },
+      "1": {
+        "start": 32,
+        "count": 1,
+        "tokens_per_block": 16384
+      },
+      "2": {
+        "start": 33,
+        "count": 1,
+        "tokens_per_block": 128
+      },
+      "3": {
+        "start": 34,
+        "count": 1,
+        "tokens_per_block": 128
+      }
+    },
+    "source_sha256": {
+      "vllm_ascend/worker/v2/attn_utils.py": "10cc241251a94245ae9bb1f359a523bf768908c3d14bcf0fcf94a575fade1be8",
+      "vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/pool_worker.py": "25363a93c70d94b5d489bf41925046ecfe2e776bc0c7cfcd8a6b71b5c8da7356",
+      "vllm_ascend/models/layer/attention/layer.py": "e659bf9400d1fed67c4d1fe6c663e3e15b04e8e723fd21a73b29d49a6e12c6af",
+      "vllm_ascend/core/kv_cache_config_builder.py": "40962f84371589adbcc5794ff406e368c8553f1e428e9bb47c1a31382e3bc442"
+    },
+    "prepare_value_verified": true
+  },
+  "regions": [
+    {
+      "bytes": 113935360
+    }
+  ],
+  "groups": [
+    {
+      "group": 0,
+      "keys": 32,
+      "segments": [
+        {
+          "region": 0,
+          "offset": 591360,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 0,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 16384,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 0,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 5770240,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 5178880,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 5195264,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 5178880,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 10949120,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 10357760,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 10374144,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 10357760,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 16128000,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 15536640,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 15553024,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 15536640,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 21306880,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 20715520,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 20731904,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 20715520,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 26485760,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 25894400,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 25910784,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 25894400,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 31664640,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 31073280,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 31089664,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 31073280,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 36843520,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 36252160,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 36268544,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 36252160,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 42022400,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 41431040,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 41447424,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 41431040,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 47201280,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 46609920,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 46626304,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 46609920,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 52380160,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 51788800,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 51805184,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 51788800,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 57559040,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 56967680,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 56984064,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 56967680,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 62737920,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 62146560,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 62162944,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 62146560,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 67916800,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 67325440,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 67341824,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 67325440,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 73095680,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 72504320,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 72520704,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 72504320,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 78274560,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 77683200,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 77699584,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 77683200,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 83453440,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 82862080,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 82878464,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 82862080,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 88632320,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 88040960,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 88057344,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 88040960,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 93811200,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 93219840,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 93236224,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 93219840,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 98990080,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 98398720,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 98415104,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 98398720,
+          "bytes": 16896,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 104168960,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 103577600,
+          "bytes": 16384,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 103593984,
+          "bytes": 512,
+          "stride": 16896
+        },
+        {
+          "region": 0,
+          "offset": 103577600,
+          "bytes": 16896,
+          "stride": 16896
+        }
+      ]
+    },
+    {
+      "group": 1,
+      "keys": 1,
+      "segments": [
+        {
+          "region": 0,
+          "offset": 4785664,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 9964544,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 15143424,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 20322304,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 25501184,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 30680064,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 35858944,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 41037824,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 46216704,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 51395584,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 56574464,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 61753344,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 66932224,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 72111104,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 77289984,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 82468864,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 87647744,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 92826624,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 98005504,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 103184384,
+          "bytes": 131072,
+          "stride": 131072
+        }
+      ]
+    },
+    {
+      "group": 2,
+      "keys": 1,
+      "segments": [
+        {
+          "region": 0,
+          "offset": 4916736,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 10095616,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 15274496,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 20453376,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 25632256,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 30811136,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 35990016,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 41168896,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 46347776,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 51526656,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 56705536,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 61884416,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 67063296,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 72242176,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 77421056,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 82599936,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 87778816,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 92957696,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 98136576,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 103315456,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 108494336,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 113673216,
+          "bytes": 131072,
+          "stride": 131072
+        }
+      ]
+    },
+    {
+      "group": 3,
+      "keys": 1,
+      "segments": [
+        {
+          "region": 0,
+          "offset": 5047808,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 10226688,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 15405568,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 20584448,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 25763328,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 30942208,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 36121088,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 41299968,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 46478848,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 51657728,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 56836608,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 62015488,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 67194368,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 72373248,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 77552128,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 82731008,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 87909888,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 93088768,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 98267648,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 103446528,
+          "bytes": 131072,
+          "stride": 131072
+        },
+        {
+          "region": 0,
+          "offset": 108625408,
+          "bytes": 131072,
+          "stride": 131072
+        }
+      ]
+    }
+  ]
+}
